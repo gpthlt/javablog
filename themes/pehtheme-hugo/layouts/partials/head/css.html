@@ -1,0 +1,7 @@
+{{- with resources.Get "css/main.css" }}
+  {{- $css := . | minify }}
+  <link rel="stylesheet" href="{{ $css.Permalink | absURL }}">
+{{- else }}
+  <!-- Fallback to static CSS -->
+  <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+{{- end }}

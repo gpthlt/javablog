@@ -1,0 +1,50 @@
+baseURL = 'https://gpthlt.github.io/javablog/'
+languageCode = 'vi-vn'
+title = 'Blog Lập trình'
+theme = 'pehtheme-hugo'
+
+# Ensure proper asset handling
+publishDir = "public"
+
+summaryLength = 20 # <- 20 words are approximately 160 characters
+googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
+disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.com
+
+[params]
+	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
+	description = 'Blog chia sẻ kiến thức lập trình Java & JavaScript bằng tiếng Việt.'
+	mainSections = 'posts'
+
+	[params.author]
+		name = 'Le Dong Trieu'
+		bio = 'Lập trình viên yêu thích Java & JavaScript'
+		avatar = 'images/avatar.png'
+		twitter = ''
+		
+
+
+[pagination]
+	pagerSize = 6 # <- Set the desired number of posts per page 
+
+[menu] # Menu management
+	[[menu.main]]
+		name = 'Home'
+		pageRef = '/'
+		weight = 10
+	[[menu.main]]
+		name = 'About'
+		pageRef = '/about'
+		weight = 15
+	[[menu.main]]
+		name = 'Tags'
+		pageRef = '/tags'
+		weight = 20
+	[[menu.main]]
+		name = 'Lập trình'
+		pageRef = '/tags/lập-trình/'
+		weight = 25
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.116.0"
